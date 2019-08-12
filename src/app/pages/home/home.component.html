@@ -1,15 +1,18 @@
+<pre>
+  {{form|json}}
+</pre>
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Check domain</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Check domain" />
+    <input type="text" class="form-control" [(ngModel)]="form.domain" name="domain" id="exampleInputEmail1" placeholder="Check domain" />
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="checkDomain()">Submit</button>
 </form>
 <hr>
 <form>
   <div class="form-group">
     <label for="exampleInputEmail1">Create short URL</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Create short URL" />
+    <input type="email" class="form-control" [(ngModel)]="form.url" name="url" id="exampleInputEmail1" placeholder="Create short URL" />
   </div>
   <button type="submit" class="btn btn-success">Submit</button>
 </form>
